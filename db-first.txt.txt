@@ -1,0 +1,16 @@
+//NOME_COLONNA - TIPO DI DATO - ATTRIBUTI - PICCOLA DESCRIZIONE PERSONALE
+
+"targa" - VARCHAR(7) - PRIMARY_KEY, UNIQUE, NOTNULL - //7 basato sul modello di targa italiana lettera,lettera,num,num,num,lettera,lettera
+"modello" - TINYINT - NOTNULL - //recuperare info da un db di modelli, es: clio,corsa,ypsilon, panda, multipla...
+"marca" - TINYINT - NOTNULL -//recuperare info da un db di marche, es: mercedes, reanult, ferrari, fiat...
+"Km_percorsi" - FLOAT(8,2) - NOTNULL
+"tipologia_carburante" - VARCHAR(17) - NOTNULL - //scelta fra benzina, gpl, diesel, elettrica, benzina/elettrica, benzina/diesel, benzina/gpl, diesel/elettrica
+"modello_motore" - TINYINT - NOTNULL - //ogni motore ha tante specifiche, collegare ad un altro db con info motori
+"condizioni" - VARCHAR(10) - NOTNULL - //far scegliere fra "buone", "non buone", "ottime", "pessime" , "mediocri"
+"aria_condizionata" - TINYINT -DEFAULT(0)
+"gomme_termiche" - TINYINT - DEFAULT(0)
+"data_ultma_revisione" - DATE - NOTNULL
+"anno_di_produzione" - DATE - NOTNULL
+"prezzo_nuovo" - FLOAT(8,2) - NOTNULL
+"prezzo_attuale" - FLOAT(8,2) - NOTNULL
+"descrizione" - TEXT - NULL
